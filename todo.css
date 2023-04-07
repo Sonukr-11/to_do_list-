@@ -1,0 +1,150 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   font-family: 'Fira sans' , sans-serif ; 
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategray;
+    min-height: 100vh;
+    color: white;
+}
+
+header{
+    padding: 2rem 1rem ;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;  
+    /* centre */
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300px;
+    margin-bottom: 1rem;
+}
+
+#new_task_form{
+    display: flex;
+}
+
+input , button{
+    border: none;
+}
+
+#new_task_input{
+    flex: 1 1 0%;
+    /* flex grow flex shrink flex basis */
+    padding: 1rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    border-color: white;
+}
+
+#new_task_input::placeholder{
+    color: gray;
+}
+
+#new_task_submit{
+    color: red;
+    font-size: 1.25rem;
+    font-weight: 700px;
+    cursor: pointer;
+    border-radius: 1.25rem;
+    background-color: aqua;
+}
+
+#new_task_submit:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.task_list{
+    padding: 1rem;
+}
+
+.task_list h2{
+    font-size: 2.5rem;
+    font-weight: 300px;
+    margin-bottom: 1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 16px;
+    background-color: lightcyan;
+}
+
+.content{
+    flex: 1 1 0%;
+    border: none;
+}
+
+#new_task_input{
+    border: none;
+}
+
+#tasks .task .content .text{
+    color: blue;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+    background-color: lightcyan;
+    
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: blue;
+}
+
+.task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 18px;
+    font-weight: 700px;
+    transition: 0.4s;
+    text-transform: uppercase;
+}
+
+.task .actions :hover{
+    opacity: 0.75;
+}
+
+.task .actions :active{
+    opacity: 0.6;
+}
+
+.task .actions .edit{
+    color: red;
+    font-size: 1.25rem;
+    font-weight: 700px;
+    cursor: pointer;
+    border-radius: 1rem;
+    /* border: none; */
+    background-color: aqua;
+}
+
+.task .actions .delete{
+    color: red;
+    font-size: 1.25rem;
+    font-weight: 700px;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: aqua;
+}
